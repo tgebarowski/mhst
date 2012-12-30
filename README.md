@@ -1,4 +1,0 @@
-mst
-===
-
-Minimum Spanning Tree

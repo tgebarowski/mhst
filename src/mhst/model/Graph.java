@@ -35,7 +35,7 @@ public class Graph {
         
         public Colors color; /**< Node color */
         public int distance; /**< Distance to root */
-        public Node path;  /**< Previous node on path */
+        public Node parent;  /**< Previous node on path */
         
         
         /**
@@ -46,7 +46,7 @@ public class Graph {
         public Node(int value) {
             this.color = Graph.Colors.WHITE;
             this.distance = Integer.MAX_VALUE;
-            this.path = null;
+            this.parent = null;
             this.value = value;
         }
         

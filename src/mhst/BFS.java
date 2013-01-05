@@ -80,7 +80,7 @@ public class BFS {
                     if (vv.color == Graph.Colors.WHITE) {
                         vv.color = Graph.Colors.GREY;
                         vv.distance = vv.distance + 1;
-                        vv.path = u;
+                        vv.parent = u;
                         q.offer(vv);
                     }
                 }

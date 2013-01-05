@@ -20,8 +20,8 @@ public class MHST {
         Tree mhst;
         HashMap<Graph.Node, Integer> eccentricity = new HashMap<Graph.Node, Integer>();
         
-        Tree.TreeNode<Integer> rootTree = new Tree.TreeNode<Integer>();
-        Node pathTree = null;
+        Tree.TreeNode<Integer> rootTree = new Tree.TreeNode<Integer>(0);
+        Node parentTree = null;
         Integer heightTree = Integer.MAX_VALUE;
         
         /* For each vertex in graph */
@@ -43,22 +43,17 @@ public class MHST {
             if (eccentricity.get(k) < heightTree) {
                 heightTree = eccentricity.get(k);
                 rootTree.data = k.value;
-                pathTree = k.parent;
+                parentTree = k.parent;
             }
         }
         
         mhst = new Tree(rootTree);
         
-        return mhst;
+        /** Create Tree here */
+        for (Node k : graph.getVertices()) { 
+            /* TODO: map graph to tree */
+        }
         
-    }
-    
-    
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+        return mhst;   
     }
 }
